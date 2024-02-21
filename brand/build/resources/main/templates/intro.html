@@ -9,11 +9,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
 </head>
 
 <script>
 $(document).ready(function(){
     $('.template_slide').slick({
+        autoplay:true,
+        autoplaySpeed: 5000,
+
+        prevArrow:$('.slide_left'),
+        nextArrow:$('.slide_right')
+
     });
 });
 </script>
@@ -150,8 +157,12 @@ $(document).ready(function(){
                 <p>Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</p>
             </div>
         </div>
-        <span class ="left">왼쪽</span>
-        <span class = "right">오른쪽</span>
+            <button span class="material-symbols-outlined slide_left">
+                arrow_circle_left
+            </button span>
+            <button span class="material-symbols-outlined slide_right">
+                arrow_circle_right
+            </button span>
     </section>
 
     <section class = "container">
