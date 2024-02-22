@@ -1,109 +1,51 @@
-header{
-    position: absolute;
-    width: 1248px;
-    height: 754px;
-    left: 240px;
-    top: 50px;
+@import url("normalize.css");
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --container-width : 1296px;
 }
 
-header .banner {
-    position: absolute;
-    width: 1120px;
-    height: 60px;
-    left: 240px;
-    top: 50px;
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
-header .banner .logo {
-    position: absolute;
+.logo {
     width: 49px;
     height: 35px;
-    left: 240px;
+    left: 184px;
     top: 62px;
 }
 
-header li {
-    position: absolute;
-    width: 322px;
-    height: 30px;
-    left: 410px;
-    top: 65px;
-    float: left;
+.container{
+     margin : 0 auto;
+     width : var(--container-width);
+     padding : 81px;
 }
 
-header nav {
-    position: absolute;
-    width: 210px;
+.banner {
+    width : 1120px;
     height: 60px;
-    left: 1150px;
-    top: 50px;
 }
 
-header .section_1 {
-    position: absolute;
-    width: 645px;
-    height: 464px;
-    left: 240px;
-    top: 240px;
+.banner li {
+    float : left;
+    margin-left : 100px;
 }
 
-header .main {
-    position: absolute;
-    width: 885px;
+.main{
+    width : 885px;
     height: 468px;
-    left: 603px;
-    top: 336px;
 }
 
-.section_2 {
-    position: absolute;
-    width: 1117px;
-    height: 560px;
-    left: 240px;
-    top: 903.18px;
+.section_4 .card_gd {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
 }
-
-.section_2 img {
-    position: absolute;
-    width: 477px;
-    height: 504px;
-    left: 251px;
-    top: auto;
-}
-
-.section_2 p {
-    position: absolute;
-    width: 475px;
-    height: 310px;
-    left: 790px;
-    top: auto;
-}
-
-.section_3 {
-    position: absolute;
-    width: 1137.28px;
-    height: 1026px;
-    left: 220px;
-    top: 1613px;
-}
-
-.section_3 h1{
-    position: absolute;
-    width: 405px;
-    height: 52px;
-    left: 596.28px;
-    top: auto;
-
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 130%;
-    /* identical to box height, or 52px */
-    display: flex;
-    align-items: center;
+.section_4 h1 {
     text-align: center;
-
-    color: #212353;
-
 }

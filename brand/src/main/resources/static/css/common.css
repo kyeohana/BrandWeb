@@ -1,11 +1,51 @@
 @import url("normalize.css");
 @import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
     --container-width : 1296px;
 }
 
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.logo {
+    width: 49px;
+    height: 35px;
+    left: 184px;
+    top: 62px;
+}
+
 .container{
      margin : 0 auto;
      width : var(--container-width);
+     padding : 81px;
+}
+
+.banner {
+    width : 1120px;
+    height: 60px;
+}
+
+.banner li {
+    float : left;
+    margin-left : 100px;
+}
+
+.main{
+    width : 885px;
+    height: 468px;
+}
+
+.section_4 .card_gd {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.section_4 h1 {
+    text-align: center;
 }
