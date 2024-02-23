@@ -13,6 +13,7 @@ body {
     font-style: normal;
     font-size: large;
     overflow-x: hidden;
+    margin: 0;
 }
 
 section {
@@ -29,10 +30,13 @@ section.active {
 body>header {
     position: fixed;
     width: 100%;
+    height: 7%;
     background-color: rgba(255, 255, 255, 0.3);
-    padding: 0 10px;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body>header.fixed {
@@ -54,8 +58,6 @@ body > header > div{
 .logo {
     width: 49px;
     height: 35px;
-    left: 184px;
-    top: 62px;
 }
 
 .container{
@@ -69,6 +71,8 @@ body > header > div{
     justify-content: space-between;
     align-items: center;
     width : var(--container-width);
+    margin: 0 auto;
+
 }
 
 .banner h1 {
@@ -76,39 +80,8 @@ body > header > div{
 }
 
 .banner li {
+    margin: 0 10px;
     order: 2;
-}
-
-.banner li a:before{
-    content: "";
-    width: 0;
-    height: 5px;
-    background-color: #00bcd4;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    transition: all 0.5s;
-}
-
-.banner li a:after{
-    content: "";
-    width: 0;
-    height: 5px;
-    background-color: #f0f;
-    position: absolute;
-    top: 120%;
-    right: 0;
-    transition: all 0.5s;
-}
-
-.banner li a:hover:before {
-    width: 50%;
-    transform: translateX(100%);
-}
-
-.banner li a:hover:after {
-    width: 50%;
-    transform: translateX(-100%);
 }
 
 .banner nav {
@@ -116,8 +89,8 @@ body > header > div{
 }
 
 .banner nav:hover{
-    transition: all 3s;
-    transform: rotate(360deg);
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .main{
@@ -140,9 +113,34 @@ body > header > div{
     padding: 15px 30px;
     border-radius: 15px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .white-btn > span {
-    vertical-align: middle;
     margin-left: 10px;
+}
+
+@media (max-width: 982px) {
+    body>header {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 25px;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner li {
+        margin: 10px 0;
+    }
+
+    .white-btn {
+        padding: 10px 20px;
+    }
 }
