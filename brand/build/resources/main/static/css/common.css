@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --container-width : 1296px;
+    --container-width : 1492px;
 }
 
 body {
@@ -11,6 +11,44 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    font-size: large;
+    overflow-x: hidden;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body>header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0 10px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    z-index: 1000;
+}
+
+body>header.fixed {
+    background-color: #ffffff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+body > header > div {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > header > div{
+    display:flex;
+    align-items: center;
 }
 
 .logo {
@@ -23,17 +61,63 @@ body {
 .container{
      margin : 0 auto;
      width : var(--container-width);
-     padding : 81px;
+     padding : 41px;
 }
 
 .banner {
-    width : 1120px;
-    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : var(--container-width);
+}
+
+.banner h1 {
+    order: 1;
 }
 
 .banner li {
-    float : left;
-    margin-left : 100px;
+    order: 2;
+}
+
+.banner li a:before{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: #00bcd4;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.banner li a:after{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: #f0f;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: all 0.5s;
+}
+
+.banner li a:hover:before {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.banner li a:hover:after {
+    width: 50%;
+    transform: translateX(-100%);
+}
+
+.banner nav {
+    order : 3;
+}
+
+.banner nav:hover{
+    transition: all 3s;
+    transform: rotate(360deg);
 }
 
 .main{
@@ -48,4 +132,17 @@ body {
 }
 .section_4 h1 {
     text-align: center;
+}
+
+.white-btn{
+    line-height: 39px;
+    box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.white-btn > span {
+    vertical-align: middle;
+    margin-left: 10px;
 }
