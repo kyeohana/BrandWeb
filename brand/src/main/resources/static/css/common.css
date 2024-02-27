@@ -11,24 +11,50 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: large;
+    font-size: medium;
     overflow-x: hidden;
     margin: 0;
 }
 
 .section_1 {
+    position :relative;
     padding-top : 12% !important;
+}
+
+.section_1 .main{ 
+    position: absolute;
+    width : 885px;
+    height: 468px;
+    top: 50%;
+    left : 30%;
+    z-index: -1;
+}
+
+.section_1 h1 {
+    text-align : left;
+    font-weight: 500;
+    font-size: 70px;
+}
+
+.section_1 h2 {
+    text-align : left;
+    font-size: medium;
+    padding-top: 30px;
+}
+
+.section_1 h2 p {
+    margin-bottom: 1%;
 }
 
 section {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateX(500px);
     transition: opacity 1.0s ease, transform 1.0s ease;
 }
 
 section.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 body>header {
@@ -40,7 +66,7 @@ body>header {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /*justify-content: center;*/
 }
 
 body>header.fixed {
@@ -66,40 +92,41 @@ body > header > div{
 
 .container{
      margin : 0 auto;
-     width : var(--container-width);
+     width : 85%;
      padding : 41px;
+     padding-left : 10%;
+     padding-right : 10%;
+     padding-top : 40%;
 }
 
 .banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width : var(--container-width);
+    width : 100%;
     margin: 0 auto;
 
 }
 
 .banner h1 {
     order: 1;
+    margin-left: 40%;
 }
 
 .banner li {
     margin: 0 10px;
     order: 2;
+    margin-left: 10%;
 }
 
 .banner nav {
     order : 3;
+    margin-left: 70%;
 }
 
 .banner nav:hover{
     -webkit-transform: scale(1.2);
 	transform: scale(1.2);
-}
-
-.main{
-    width : 885px;
-    height: 468px;
 }
 
 .section_4 .card_gd {
@@ -114,7 +141,7 @@ body > header > div{
 .white-btn{
     line-height: 39px;
     box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 11px 17px;
+    padding: 1px 12px;
     border-radius: 15px;
     font-weight: 600;
     display: flex;
